@@ -1,6 +1,6 @@
 package part1;
 
-public class Mp3FileDetails extends PrimitiveFileDitails {
+public class Mp3FileDetails extends PrimitiveFileDetails {
 
     private int lengthSec;
 

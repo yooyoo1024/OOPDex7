@@ -1,6 +1,6 @@
 package part1;
 
-public class DocxFileDetails extends PrimitiveFileDitails {
+public class DocxFileDetails extends PrimitiveFileDetails {
 
     private int words;
     private int pages;

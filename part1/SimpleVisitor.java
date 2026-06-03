@@ -1,7 +1,7 @@
 package part1;
 
 public interface SimpleVisitor extends Visitor {
-    void visitPrimitive(PrimitiveFileDitails d);
+    void visitPrimitive(PrimitiveFileDetails d);
 
     @Override
     default void visit(DocxFileDetails d) {

@@ -1,10 +1,10 @@
 package part1;
 
-public abstract class PrimitiveFileDitails extends FileDetails {
+public abstract class PrimitiveFileDetails extends FileDetails {
 
     final int size;
 
-    public PrimitiveFileDitails(String path, String fileName, int size) {
+    public PrimitiveFileDetails(String path, String fileName, int size) {
         super(path, fileName);
         this.size = size;
     }

@@ -1,6 +1,6 @@
 package part1;
 
-public class PptxFileDetails extends PrimitiveFileDitails {
+public class PptxFileDetails extends PrimitiveFileDetails {
 
     private int slides;
 

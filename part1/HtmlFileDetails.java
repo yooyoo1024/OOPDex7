@@ -1,6 +1,6 @@
 package part1;
 
-public class HtmlFileDetails extends PrimitiveFileDitails {
+public class HtmlFileDetails extends PrimitiveFileDetails {
 
     private int lines;
 

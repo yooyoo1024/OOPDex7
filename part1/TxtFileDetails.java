@@ -1,6 +1,6 @@
 package part1;
 
-public class TxtFileDetails extends PrimitiveFileDitails {
+public class TxtFileDetails extends PrimitiveFileDetails {
 
     private int words;
 

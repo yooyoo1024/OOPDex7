@@ -53,7 +53,7 @@ public class Main {
         while (!(myString = scanner.nextLine()).equals("q")) {
             switch (myString) {
                 case "c":
-                    //TODO: Add counting behavior
+                    System.out.println("Found " + FileCountVisitor.countFiles(root) + " files");
                     break;
                 case "sz":
                     //TODO: Add size calculation behavior

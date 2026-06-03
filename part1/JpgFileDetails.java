@@ -1,6 +1,6 @@
 package part1;
 
-public class JpgFileDetails extends PrimitiveFileDitails {
+public class JpgFileDetails extends PrimitiveFileDetails {
 
     private int width;
     private int height;
