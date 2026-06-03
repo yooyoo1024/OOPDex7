@@ -1,21 +1,20 @@
 package part1;
 
-public class PptxFileDetails extends FileDetails {
+public class PptxFileDetails extends PrimitiveFileDitails {
 
     private int slides;
-    private int size;
 
     public PptxFileDetails(String path, String fileName, int slides, int size) {
-        super(path, fileName);
+        super(path, fileName, size);
         this.slides = slides;
-        this.size = size;
     }
 
     public int getSlides() {
         return slides;
     }
 
-    public int getSize() {
-        return size;
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

@@ -1,10 +1,9 @@
 package part1;
 
-public class JpgFileDetails extends FileDetails {
+public class JpgFileDetails extends PrimitiveFileDitails {
 
     private int width;
     private int height;
-    private int size;
 
     public JpgFileDetails(
         String path,
@@ -13,10 +12,9 @@ public class JpgFileDetails extends FileDetails {
         int height,
         int size
     ) {
-        super(path, fileName);
+        super(path, fileName, size);
         this.width = width;
         this.height = height;
-        this.size = size;
     }
 
     public int getWidth() {
@@ -29,5 +27,10 @@ public class JpgFileDetails extends FileDetails {
 
     public int getSize() {
         return size;
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }
