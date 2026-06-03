@@ -1,9 +1,8 @@
 package part1;
 
-public class Mp3FileDetails extends FileDetails {
+public class Mp3FileDetails extends PrimitiveFileDitails {
 
     private int lengthSec;
-    private int size;
 
     public Mp3FileDetails(
         String path,
@@ -11,9 +10,8 @@ public class Mp3FileDetails extends FileDetails {
         int lengthSec,
         int size
     ) {
-        super(path, fileName);
+        super(path, fileName, size);
         this.lengthSec = lengthSec;
-        this.size = size;
     }
 
     public int getLengthSec() {
@@ -22,5 +20,10 @@ public class Mp3FileDetails extends FileDetails {
 
     public int getSize() {
         return size;
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

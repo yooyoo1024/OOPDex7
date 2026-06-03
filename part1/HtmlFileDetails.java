@@ -1,14 +1,12 @@
 package part1;
 
-public class HtmlFileDetails extends FileDetails {
+public class HtmlFileDetails extends PrimitiveFileDitails {
 
     private int lines;
-    private int size;
 
     public HtmlFileDetails(String path, String fileName, int lines, int size) {
-        super(path, fileName);
+        super(path, fileName, size);
         this.lines = lines;
-        this.size = size;
     }
 
     public int getLines() {
@@ -19,11 +17,8 @@ public class HtmlFileDetails extends FileDetails {
         this.lines = lines;
     }
 
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

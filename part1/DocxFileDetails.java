@@ -1,10 +1,9 @@
 package part1;
 
-public class DocxFileDetails extends FileDetails {
+public class DocxFileDetails extends PrimitiveFileDitails {
 
     private int words;
     private int pages;
-    private int size;
 
     public DocxFileDetails(
         String path,
@@ -13,10 +12,9 @@ public class DocxFileDetails extends FileDetails {
         int pages,
         int size
     ) {
-        super(path, fileName);
+        super(path, fileName, size);
         this.words = words;
         this.pages = pages;
-        this.size = size;
     }
 
     public int getWords() {
@@ -27,7 +25,8 @@ public class DocxFileDetails extends FileDetails {
         return pages;
     }
 
-    public int getSize() {
-        return size;
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

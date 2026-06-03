@@ -10,4 +10,9 @@ public class DirectoryDetails extends FileDetails {
     public void addFile(FileDetails fileDetails) {
         // TODO: complete
     }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
+    }
 }
