@@ -53,10 +53,16 @@ public class Main {
         while (!(myString = scanner.nextLine()).equals("q")) {
             switch (myString) {
                 case "c":
-                    System.out.println("Found " + FileCountVisitor.countFiles(root) + " files");
+                    System.out.println(
+                        "Found " + FileCountVisitor.countFiles(root) + " files"
+                    );
                     break;
                 case "sz":
-                    //TODO: Add size calculation behavior
+                    System.out.println(
+                        "the total size is" +
+                            SizeVisitor.calcSize(root) +
+                            "bytes"
+                    );
                     break;
                 case "st":
                     //TODO: Add statistics behavior
@@ -76,7 +82,9 @@ public class Main {
                 "hm: homemade"
         );
 
-        Hamburger hamburger = HamburgerFactory.createHamburger(scanner.nextLine());
+        Hamburger hamburger = HamburgerFactory.createHamburger(
+            scanner.nextLine()
+        );
 
         String choice = "";
         while (!choice.equals("s")) {
@@ -103,7 +111,9 @@ public class Main {
                 "sa: salad\n" +
                 "fe: friedEgg"
         );
-        // TODO: Add a Hamburger-Topping Factory and use it to create a decorated Hamburger
-        return null;
+        return TopingsFactory.createHamburgerWithTopings(
+            hamburger,
+            scanner.nextLine()
+        );
     }
 }
