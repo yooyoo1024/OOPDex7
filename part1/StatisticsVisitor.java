@@ -4,6 +4,8 @@ public class StatisticsVisitor implements Visitor {
 
     private String stats = "";
 
+    private StatisticsVisitor() {}
+
     public static String getStats(FileDetails root) {
         StatisticsVisitor v = new StatisticsVisitor();
         root.accept(v);

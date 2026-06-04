@@ -65,10 +65,10 @@ public class Main {
                     );
                     break;
                 case "st":
-                    //TODO: Add statistics behavior
+                    System.out.println(StatisticsVisitor.getStats(root));
                     break;
                 case "sh":
-                //TODO: Add short representation behavior
+                    System.out.println(ShortPrintVisitor.getAllNames(root));
             }
         }
     }
