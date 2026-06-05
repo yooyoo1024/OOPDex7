@@ -5,8 +5,18 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
-import part1.*;
-import part2.*;
+
+import part1.DirectoryDetails;
+import part1.FileCountVisitor;
+import part1.FileDetails;
+import part1.FileDetailsFactory;
+import part1.ShortPrintVisitor;
+import part1.SizeVisitor;
+import part1.StatisticsVisitor;
+import part2.Hamburger;
+import part2.HamburgerFactory;
+import part2.TopingsFactory;
+
 
 public class Main {
 

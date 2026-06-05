@@ -1,7 +1,11 @@
 package part1;
 
 public interface Visitor {
-    void visit(DirectoryDetails d);
+    default void visit(DirectoryDetails d){
+        for (var f : d.getFiles()) {
+            f.accept(this);
+        }
+    }
 
     void visit(DocxFileDetails d);
     void visit(HtmlFileDetails d);

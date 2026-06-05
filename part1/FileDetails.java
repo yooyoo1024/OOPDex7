@@ -1,7 +1,5 @@
 package part1;
 
-// TODO: add visitor pattern (visitor classes and accept function to all class-hierarchy).
-//  Do not add any functionality to the FileDetails hierarchy apart from the visitor pattern implementation.
 public abstract class FileDetails {
 
     protected String name;

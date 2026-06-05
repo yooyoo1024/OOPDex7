@@ -9,15 +9,12 @@ public class ShortPrintVisitor implements SimpleVisitor {
     public static String getAllNames(FileDetails root) {
         var v = new ShortPrintVisitor();
         root.accept(v);
-
         return v.allNames;
     }
 
     @Override
     public void visit(DirectoryDetails d) {
-        for (var f : d.getFiles()) {
-            f.accept(this);
-        }
+        SimpleVisitor.super.visit(d);
         allNames += '\n' + d.getName();
     }
 

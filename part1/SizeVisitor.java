@@ -15,13 +15,6 @@ public class SizeVisitor implements SimpleVisitor {
     private SizeVisitor() {}
 
     @Override
-    public void visit(DirectoryDetails d) {
-        for (var f : d.getFiles()) {
-            f.accept(this);
-        }
-    }
-
-    @Override
     public void visitPrimitive(PrimitiveFileDetails d) {
         size += d.getSize();
     }

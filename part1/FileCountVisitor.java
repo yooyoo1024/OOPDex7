@@ -15,13 +15,6 @@ public class FileCountVisitor implements SimpleVisitor {
     private FileCountVisitor() {}
 
     @Override
-    public void visit(DirectoryDetails d) {
-        for (var f : d.getFiles()) {
-            f.accept(this);
-        }
-    }
-
-    @Override
     public void visitPrimitive(PrimitiveFileDetails d) {
         count++;
     }

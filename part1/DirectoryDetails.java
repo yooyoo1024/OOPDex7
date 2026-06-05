@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-// TODO: Implement Composite (change this file).
 public class DirectoryDetails extends FileDetails {
 
     private final List<FileDetails> files = new ArrayList<>();

@@ -5,12 +5,6 @@ import java.util.regex.Pattern;
 
 public class FileDetailsFactory {
 
-    public static void main(String[] args) {
-        FileDetails details = FileDetailsFactory.getFileDetails(
-            "web/backup.mp3 length in seconds: 354, 7901 bytes"
-        );
-    }
-
     private static final String EXTENTION_CAPTURE_PATTERN =
         "^[^ .]*(\\.[^ ]*)?";
     private static final String MP3_CAPTURE_PATTERN =
