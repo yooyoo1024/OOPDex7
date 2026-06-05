@@ -1,7 +1,6 @@
 package part1;
 
 public class StatisticsVisitor implements Visitor {
-
     private String stats = "";
 
     private StatisticsVisitor() {}
@@ -28,40 +27,55 @@ public class StatisticsVisitor implements Visitor {
 
     @Override
     public void visit(DocxFileDetails d) {
-        // The file word.docx has an average of 343 words per page.
-
-        
+        stats += String.format(
+            "\nThe file %s has an average of %i words per page.",
+            d.getName(),
+            Math.round(d.getWords() / (float) d.getPages())
+        );
     }
 
     @Override
     public void visit(HtmlFileDetails d) {
-        // TODO Auto-generated method stub
-        
+        stats += String.format(
+            "\nThe file %s contains %i lines.",
+            d.getName(),
+            d.getLines()
+        );
     }
 
     @Override
     public void visit(JpgFileDetails d) {
-        // TODO Auto-generated method stub
-        
+        stats += String.format(
+            "\nThe picture %s has an average of %i bytes per pixel.",
+            d.getName(),
+            Math.round(d.getSize() / (float) (d.getWidth() * d.getHeight()))
+        );
     }
 
     @Override
     public void visit(Mp3FileDetails d) {
-        // TODO Auto-generated method stub
-        
+        stats += String.format(
+            "\nThe bitrate of %s is %i bytes per second.",
+            d.getName(),
+            Math.round(d.getSize() / (float) d.getLengthSec())
+        );
     }
 
     @Override
     public void visit(PptxFileDetails d) {
-        // TODO Auto-generated method stub
-        
+        stats += String.format(
+            "\nThe average slide size in %s is %i.",
+            d.getName(),
+            Math.round(d.getSize() / (float) d.getSlides())
+        );
     }
 
     @Override
     public void visit(TxtFileDetails d) {
-        // TODO Auto-generated method stub
-        
+        stats += String.format(
+            "\nThe file %s contains %i words.",
+            d.getName(),
+            d.getWords()
+        );
     }
-
-    
 }
