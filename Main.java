@@ -69,9 +69,7 @@ public class Main {
                     break;
                 case "sz":
                     System.out.println(
-                        "the total size is" +
-                            SizeVisitor.calcSize(root) +
-                            "bytes"
+                        "the total size is " + SizeVisitor.calcSize(root) + " bytes"
                     );
                     break;
                 case "st":

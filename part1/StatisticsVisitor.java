@@ -19,7 +19,7 @@ public class StatisticsVisitor implements Visitor {
             ++fileCount;
         }
         stats += String.format(
-            "\nDirectory %s has %i files",
+            "\nDirectory %s has %d files",
             d.getName(),
             fileCount
         );
@@ -28,7 +28,7 @@ public class StatisticsVisitor implements Visitor {
     @Override
     public void visit(DocxFileDetails d) {
         stats += String.format(
-            "\nThe file %s has an average of %i words per page.",
+            "\nThe file %s has an average of %d words per page.",
             d.getName(),
             Math.round(d.getWords() / (float) d.getPages())
         );
@@ -37,7 +37,7 @@ public class StatisticsVisitor implements Visitor {
     @Override
     public void visit(HtmlFileDetails d) {
         stats += String.format(
-            "\nThe file %s contains %i lines.",
+            "\nThe file %s contains %d lines.",
             d.getName(),
             d.getLines()
         );
@@ -46,7 +46,7 @@ public class StatisticsVisitor implements Visitor {
     @Override
     public void visit(JpgFileDetails d) {
         stats += String.format(
-            "\nThe picture %s has an average of %i bytes per pixel.",
+            "\nThe picture %s has an average of %d bytes per pixel.",
             d.getName(),
             Math.round(d.getSize() / (float) (d.getWidth() * d.getHeight()))
         );
@@ -55,7 +55,7 @@ public class StatisticsVisitor implements Visitor {
     @Override
     public void visit(Mp3FileDetails d) {
         stats += String.format(
-            "\nThe bitrate of %s is %i bytes per second.",
+            "\nThe bitrate of %s is %d bytes per second.",
             d.getName(),
             Math.round(d.getSize() / (float) d.getLengthSec())
         );
@@ -64,7 +64,7 @@ public class StatisticsVisitor implements Visitor {
     @Override
     public void visit(PptxFileDetails d) {
         stats += String.format(
-            "\nThe average slide size in %s is %i.",
+            "\nThe average slide size in %s is %d.",
             d.getName(),
             Math.round(d.getSize() / (float) d.getSlides())
         );
@@ -73,7 +73,7 @@ public class StatisticsVisitor implements Visitor {
     @Override
     public void visit(TxtFileDetails d) {
         stats += String.format(
-            "\nThe file %s contains %i words.",
+            "\nThe file %s contains %d words.",
             d.getName(),
             d.getWords()
         );
